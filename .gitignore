@@ -11,3 +11,6 @@ logs
 
 # Dependency directorys
 node_modules/
+
+# Compiled 
+public/compiled
