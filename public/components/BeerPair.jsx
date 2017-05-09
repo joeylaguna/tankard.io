@@ -10,7 +10,7 @@ class BeerPair extends React.Component {
   	return(
   	  <div>
   	    {
-					this.props.currentBeer.name ? `${this.props.currentBeer.name} is a ${this.props.currentBeer.type} and should be drank in a ${beerPair[this.props.currentBeer.type][0]}` : 'no beers'
+					this.props.currentBeer.name ? `${this.props.currentBeer.name} is a ${this.props.currentBeer.type} and should be drank in a ${beerPair[this.props.currentBeer.type][0]}` : ''
 				}
   	  </div>
   	)
