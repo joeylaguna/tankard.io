@@ -26,7 +26,6 @@ app.get('/:beer', (req, res) => {
       	let temp = li.children('a').eq(0);
       	beerObj.name = temp.text();
       	beerObj.url = temp.attr('href');
-        console.log(JSON.stringify(beerObj));
       	results.push(beerObj);
       });
       res.send(results);

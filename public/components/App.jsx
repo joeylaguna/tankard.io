@@ -53,7 +53,6 @@ handleIndividalBeerSearch(beer) {
       let currentBeer = {};
       currentBeer.name = response.data['beerName'];
       currentBeer.type = response.data['beerType'];
-      console.log(`worked! ${JSON.stringify(currentBeer)}`);
       this.setState({
         currentBeer: currentBeer,
       });

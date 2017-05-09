@@ -19,7 +19,6 @@ class InputArea extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log('Inside handleSubmit');
     let beer = this.state.beerQuery;
     this.props.handleBeerSearch(beer);
   }
