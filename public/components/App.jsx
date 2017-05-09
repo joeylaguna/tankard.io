@@ -13,12 +13,14 @@ class App extends React.Component {
     this.state = {
       currentBeer: {},
       beerList: [],
+      loading: false
     };
   }
 
   handleBeerSearch(beer) {
     this.setState({
       currentBeer: beer,
+      loading: true
     });
 
     axios.get(`/${beer}`)
@@ -44,6 +46,9 @@ class App extends React.Component {
   }
 
 handleIndividalBeerSearch(beer) {
+  this.setState({
+    loading: true
+  });
   let urlString = beer['url'].split('/');
   let firstCode = urlString[urlString.length - 3];
   let secondCode = urlString[urlString.length - 2];
@@ -55,6 +60,7 @@ handleIndividalBeerSearch(beer) {
       currentBeer.type = response.data['beerType'];
       this.setState({
         currentBeer: currentBeer,
+        loading: false
       });
     })
     .catch((error) => {
@@ -67,8 +73,8 @@ handleIndividalBeerSearch(beer) {
       <div>
         <InputArea handleBeerSearch={this.handleBeerSearch} />
         <QueryArea beerList={this.state.beerList} handleIndividalBeerSearch={this.handleIndividalBeerSearch}/>
-        <BeerPair currentBeer={this.state.currentBeer} />
-        <Details currentBeer={this.state.currentBeer}/>
+        {!this.state.loading ? <div><BeerPair currentBeer={this.state.currentBeer} /> <Details currentBeer={this.state.currentBeer}/></div> : 'Loading...'}
+        
       </div>
     );
   }
