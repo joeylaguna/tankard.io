@@ -8,7 +8,7 @@ class QueryArea extends React.Component {
 
 	handleBeerClick(e) {
 	  e.preventDefault();
-		const targetBeer = this.props.beerList[e.target.key];
+		const targetBeer = this.props.beerList[e.target.value];
 		this.props.handleIndividalBeerSearch(targetBeer);
 	}
 
@@ -21,7 +21,7 @@ class QueryArea extends React.Component {
 						<h4>Did you mean...</h4>
 					<ul>
 					  {this.props.beerList.map((item, index) => {
-						  return <li key={index} onClick={this.handleBeerClick}>{item['name']}</li>
+						  return <li value={index} key={index} onClick={this.handleBeerClick}>{item['name']}</li>
 					  })}
 					</ul></div> : ''
 				}
