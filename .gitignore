@@ -1,0 +1,13 @@
+### node etc ###
+
+.DS_Store
+
+# Logs
+logs
+*.log
+
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# Dependency directorys
+node_modules/
