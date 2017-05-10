@@ -20,6 +20,7 @@ class App extends React.Component {
   handleBeerSearch(beer) {
     this.setState({
       currentBeer: beer,
+      beerList: [],
       loading: true
     });
 
