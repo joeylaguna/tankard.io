@@ -39,6 +39,10 @@ class App extends React.Component {
       if (beerList.length > 0) {
         //first code 
         this.handleIndividalBeerSearch(beerList[0]);
+      } else if (beerList.length === 0) {
+        this.setState({
+          loading: false
+        });
       }
     })
     .catch((error) => {
