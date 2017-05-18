@@ -28,6 +28,7 @@ class InputArea extends React.Component {
   	  <div>
         <form onSubmit={this.handleSubmit}>
   	      <input type="text" value={this.state.beerQuery} onChange={this.handleChange}></input>
+          <input type='submit' value='Search'/>
         </form>
   	  </div>
   	)
