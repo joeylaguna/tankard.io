@@ -3,6 +3,7 @@ import InputArea from './InputArea.jsx';
 import QueryArea from './QueryArea.jsx';
 import BeerPair from './BeerPair.jsx';
 import Details from './Details.jsx';
+import pairList from './../../pairList.js';
 import axios from 'axios';
 
 class App extends React.Component {
@@ -10,9 +11,11 @@ class App extends React.Component {
     super();
     this.handleBeerSearch = this.handleBeerSearch.bind(this);
     this.handleIndividalBeerSearch = this.handleIndividalBeerSearch.bind(this);
+    this.updateGlass = this.updateGlass.bind(this);
     this.state = {
       currentBeer: {},
       beerList: [],
+      updatedGlass: '',
       loading: false
     };
   }
@@ -65,7 +68,8 @@ handleIndividalBeerSearch(beer) {
       currentBeer.type = response.data['beerType'];
       this.setState({
         currentBeer: currentBeer,
-        loading: false
+        loading: false,
+        updatedGlass: pairList[currentBeer.type][0]
       });
     })
     .catch((error) => {
@@ -73,13 +77,19 @@ handleIndividalBeerSearch(beer) {
     });
 }
 
+updateGlass(glass) {
+  this.setState({
+    updatedGlass: glass
+  });
+}
+
   render() {
     return (
       <div>
         <InputArea handleBeerSearch={this.handleBeerSearch} />
         <QueryArea beerList={this.state.beerList} handleIndividalBeerSearch={this.handleIndividalBeerSearch}/>
-        {!this.state.loading ? <div><BeerPair currentBeer={this.state.currentBeer} /> <Details currentBeer={this.state.currentBeer}/></div> : 'Loading...'}
-        
+        {!this.state.loading ? <div><BeerPair currentBeer={this.state.currentBeer} updateGlass={this.updateGlass} currentGlass={this.state.updatedGlass}/> <Details currentBeer={this.state.currentBeer} updateGlass={this.state.updatedGlass} /></div> : 'Loading...'}
+
       </div>
     );
   }
