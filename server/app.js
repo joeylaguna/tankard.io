@@ -7,6 +7,7 @@ const app = express();
 app.use(cors({origin: 'http://localhost:3000'}));
 
 app.use(express.static(__dirname + '/../public'));
+app.set('port', (process.env.PORT || 5000));
 
 app.get('/', (req, res) => {
   res.send('success');
@@ -56,8 +57,8 @@ app.get('/:idOne/:idTwo', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log('listening on port 3000');
-});
+app.listen(app.get('port'), () => {
+  console.log("Node app is running at localhost:" + app.get('port'))
+})
 
 module.exports.app = app;
