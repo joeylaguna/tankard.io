@@ -46,7 +46,7 @@ app.get('/:idOne/:idTwo', (req, res) => {
       let results = {};
       let beerName = $('.titleBar h1').text().split(' |')[0];
       let beerDetails = $($('#ba-content div .break').toArray())
-      let beerType = $(beerDetails[1]).children('a').eq(4).text();
+      let beerType = $(beerDetails[1]).children('a').eq(4).text() || $(beerDetails[1]).children('a').eq(3).text();
       results.beerName = beerName;
       results.beerType = beerType;
       res.send(results);
