@@ -10,9 +10,7 @@ class Details extends React.Component {
   render(){
   	return(
   	  <div>
-        {
-          this.props.currentBeer.name ? `${glassDetails[beerPair[this.props.currentBeer.type][0]]}` : ''
-        }
+        {this.props.updateGlass ? `${glassDetails[this.props.updateGlass]}` : ''}
   	  </div>
   	)
   }
