@@ -28,6 +28,12 @@ class App extends React.Component {
       loading: true
     });
 
+    if (beer === '') {
+      this.setState({
+        loading: false
+      });
+    }
+
     axios.get(`/${beer}`)
     .then((response) => {
       let beerList = [];
