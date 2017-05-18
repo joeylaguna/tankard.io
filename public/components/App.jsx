@@ -24,6 +24,7 @@ class App extends React.Component {
     this.setState({
       currentBeer: beer,
       beerList: [],
+      updatedGlass: '',
       loading: true
     });
 
