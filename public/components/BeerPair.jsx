@@ -1,7 +1,7 @@
-import React from 'react';
+import React           from 'react';
 import MulitpleGlasses from './MultipleGlasses.jsx';
-import beerPair from './../../pairList.js';
-import glassShopList from './../../glassShopList.js';
+import beerPair        from './../../pairList.js';
+import glassShopList   from './../../glassShopList.js';
 
 const BeerPair = (props) => {
   console.log('here');
