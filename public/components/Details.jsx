@@ -1,6 +1,6 @@
-import React from 'react';
+import React        from 'react';
 import glassDetails from './../../glassDetails.js';
-import beerPair from './../../pairList.js';
+import beerPair     from './../../pairList.js';
 
 const Details = (props) => {
   return (
