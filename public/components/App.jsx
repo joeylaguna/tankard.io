@@ -1,10 +1,10 @@
-import React from 'react';
+import React     from 'react';
 import InputArea from './InputArea.jsx';
 import QueryArea from './QueryArea.jsx';
-import BeerPair from './BeerPair.jsx';
-import Details from './Details.jsx';
-import pairList from './../../pairList.js';
-import axios from 'axios';
+import BeerPair  from './BeerPair.jsx';
+import Details   from './Details.jsx';
+import pairList  from './../../pairList.js';
+import axios     from 'axios';
 
 class App extends React.Component {
   constructor() {
@@ -95,7 +95,7 @@ updateGlass(glass) {
       <div>
         <InputArea handleBeerSearch={this.handleBeerSearch} />
         <QueryArea beerList={this.state.beerList} handleIndividalBeerSearch={this.handleIndividalBeerSearch}/>
-        {!this.state.loading ? <div><BeerPair currentBeer={this.state.currentBeer} updateGlass={this.updateGlass} currentGlass={this.state.updatedGlass}/> <Details currentBeer={this.state.currentBeer} updateGlass={this.state.updatedGlass} /></div> : 'Loading...'}
+        {!this.state.loading ? <div><BeerPair currentBeer={this.state.currentBeer} updateGlass={this.updateGlass} currentGlass={this.state.updatedGlass}/> <Details currentBeer={this.state.currentBeer} updateGlass={this.state.updatedGlass} /></div> : <div className='spinner'></div>}
 
       </div>
     );
