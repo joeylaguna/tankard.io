@@ -17,7 +17,7 @@ const BeerPair = (props) => {
 		  </div>
 		: ''
 	  }
-	  </div>
+	</div>
   );
 }
 
