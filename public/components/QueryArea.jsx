@@ -1,34 +1,26 @@
 import React from 'react';
 
-class QueryArea extends React.Component {
-  constructor(props){
-  	super(props);
-		this.handleBeerClick = this.handleBeerClick.bind(this);
-  }
-
-	handleBeerClick(e) {
-	  e.preventDefault();
-		const targetBeer = this.props.beerList[e.target.value];
-		this.props.handleIndividalBeerSearch(targetBeer);
+const QueryArea = (props) => {
+  const handleBeerClick = (e) => {
+    e.preventDefault();
+		const targetBeer = props.beerList[e.target.value];
+		props.handleIndividalBeerSearch(targetBeer);
 	}
-
-  render(){
-  	return(
-  	  <div>
-  	    {
-				  this.props.beerList && this.props.beerList.length > 1 ?
-					<div>
-						<h4>Did you mean...</h4>
-					<ul>
-					  {this.props.beerList.map((item, index) => {
-						  return <li value={index} key={index} onClick={this.handleBeerClick}>{item['name']}</li>
-					  })}
-					</ul></div> : ''
-				}
-  	  </div>
-  	)
-  }
+	
+	return (
+	  <div>
+			{
+				props.beerList && props.beerList.length > 1 ?
+				<div>
+					<h4>Did you mean...</h4>
+				<ul>
+					{props.beerList.map((item, index) => {
+						return <li value={index} key={index} onClick={handleBeerClick}>{item['name']}</li>
+					})}
+				</ul></div> : ''
+			}
+		</div>
+	)
 }
-
 
 export default QueryArea;
