@@ -95,7 +95,7 @@ updateGlass(glass) {
       <div>
         <InputArea handleBeerSearch={this.handleBeerSearch} />
         <QueryArea beerList={this.state.beerList} handleIndividalBeerSearch={this.handleIndividalBeerSearch}/>
-        {!this.state.loading ? <div><BeerPair currentBeer={this.state.currentBeer} updateGlass={this.updateGlass} currentGlass={this.state.updatedGlass}/> <Details currentBeer={this.state.currentBeer} updateGlass={this.state.updatedGlass} /></div> : <div className='spinner'></div>}
+        {!this.state.loading ? <div><BeerPair currentBeer={this.state.currentBeer} updateGlass={this.updateGlass} currentGlass={this.state.updatedGlass}/> <Details currentBeer={this.state.currentBeer} updateGlass={this.state.updatedGlass} /></div> : `Loading...`}
 
       </div>
     );

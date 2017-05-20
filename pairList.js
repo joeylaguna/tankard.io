@@ -75,7 +75,7 @@ const beerPair = {
   'Scottish Gruit / Ancient Herbed Ale': ['Mug (or Seidel, Stein)', 'Pint Glass (or Becker, Nonic, Tumbler)'],
   'American Adjunct Lager': ['Pilsner Glass (or Pokal)', 'Pint Glass (or Becker, Nonic, Tumbler)'],
   'American Amber / Red Lager': ['Mug (or Seidel, Stein)', 'Pilsner Glass (or Pokal)', 'Pint Glass (or Becker, Nonic, Tumbler)'],
-  'American Double / Imperial Pilsner': ['Pilsner Glass (or Pokal)', ],
+  'American Double / Imperial Pilsner': ['Pilsner Glass (or Pokal)'],
   'American Malt Liquor': ['Mug (or Seidel, Stein)', 'Pilsner Glass (or Pokal)', 'Pint Glass (or Becker, Nonic, Tumbler)'],
   'American Pale Lager': ['Pilsner Glass (or Pokal)'],
   'California Common / Steam Beer': ['Mug (or Seidel, Stein)', 'Pilsner Glass (or Pokal)', 'Pint Glass (or Becker, Nonic, Tumbler)'],

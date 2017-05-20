@@ -62,4 +62,4 @@ app.listen(app.get('port'), () => {
   console.log("Node app is running at localhost:" + app.get('port'))
 })
 
-module.exports.app = app;
+module.exports = app;
