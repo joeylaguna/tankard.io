@@ -21,7 +21,7 @@ const beerPair = {
   'Rye Beer': ['Pint Glass (or Becker, Nonic, Tumbler)', 'Stange (Slender Cylinder)'],
   'Wheatwine': ['Snifter', 'Oversized Wine Glass'],
   'Belgian Dark Ale': ['Snifter', 'Tulip', 'Oversized Wine Glass'],
-  'Belgian IPA': ['Goblet (or Chalice)', 'Belgian IPA'],
+  'Belgian IPA': ['Goblet (or Chalice)'],
   'Belgian Pale Ale': ['Snifter', 'Tulip', 'Oversized Wine Glass'],
   'Belgian Strong Dark Ale': ['Snifter', 'Tulip', 'Oversized Wine Glass'],
   'Belgian Strong Pale Ale': ['Snifter', 'Tulip', 'Oversized Wine Glass'],
