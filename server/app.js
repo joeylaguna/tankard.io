@@ -1,16 +1,17 @@
-const express = require('express');
-const cors = require('cors');
-const axios = require('axios');
-const cheerio = require('cheerio');
-const request = require('request');
-const app = express();
+const express           = require('express');
+const cors              = require('cors');
+const axios             = require('axios');
+const cheerio           = require('cheerio');
+const request           = require('request');
+const app               = express();
+
 app.use(cors({origin: 'http://localhost:3000'}));
 
 app.use(express.static(__dirname + '/../public'));
 app.set('port', (process.env.PORT || 5000));
 
 app.get('/', (req, res) => {
-  res.send('success');
+  res.send(200);
 });
 
 app.get('/:beer', (req, res) => {
